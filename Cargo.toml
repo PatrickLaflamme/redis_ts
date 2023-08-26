@@ -13,10 +13,9 @@ edition = "2018"
 exclude = ["docker"]
 
 [dependencies]
-redis = { version = "0.23.0", optional = true }
+redis = { version = "0.23.0", default-features = false }
 
 [features]
-default = ['redis']
 tokio-comp = ['redis/tokio-comp']
 async-std-comp = ['redis/async-std-comp']
 
